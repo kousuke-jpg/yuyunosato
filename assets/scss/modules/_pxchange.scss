@@ -1,0 +1,3 @@
+@function per($px, $base-px: 1440) {
+    @return calc($px / $base-px) * 100%;
+  }

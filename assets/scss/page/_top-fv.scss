@@ -1,0 +1,277 @@
+@use '../bases/variables' as vb;
+@use '../modules/index' as md;
+
+.header_wrap {
+    padding:0 27px;
+    background-color: vb.$beige-color;
+
+    header {
+        height: 81px;
+        @include md.flexset(center, space-between);
+        margin: 0 auto;
+        max-width: 930px;
+
+        .hd_left {
+            @include md.flexset(flex-end);
+            gap: 20px;
+            @include md.rps-sw(pc){
+                gap:7px;
+            }
+
+            p {
+                padding-bottom: 1px;
+
+                strong {
+                    @include md.fontset(vb.$main-font, 2.0rem, 500, 29px);
+                    color: vb.$green-color;
+                    @include md.rps-sw(pc){
+                        font-size: 1.6rem;
+                    }
+
+                }
+            }
+
+            h1 {
+                width: 284px;
+                @include md.rps-sw(pc){
+                    width:220px;
+                }
+            }
+        }
+
+        .hd_right {
+            p {
+                a {
+                    display: block;
+                    @include md.fontset(vb.$main-font, 4.0rem, 500, 58px);
+                    color: vb.$green-color;
+                    transform: translateY(2px);
+                    position: relative;
+                    transition: 0.3s;
+                    @include md.rps-sw(pc){
+                        font-size:2.8rem;
+                    }
+
+                    @include md.hover {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        background-color: vb.$green-color;
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        transition: 0.3s;
+                    }
+                }
+
+                a:before {
+                    content: "";
+                    display: block;
+                    width: 28px;
+                    height: 36px;
+                    background: url(../img/tel.svg) no-repeat center/cover;
+                    position: absolute;
+                    top: calc(50% + 3px);
+                    left: -9px;
+                    transform: translate(-100%, -50%);
+                    @include md.rps-sw(pc){
+                        left:-3px;
+                        width:20px;
+                        height:26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fv {
+    overflow: hidden;
+    .fv_bg {
+        position: relative;
+        padding-top:426px;
+        padding-bottom:84px;
+        background: url(../img/fv_bg.jpg) no-repeat center/cover;
+
+        .anv_logo {
+            position: absolute;
+            top: 40px;
+            left: 120px;
+            width: 161px;
+            @include md.rps-sw(tab){
+                top:17px;
+                left:28px;
+            }
+        }
+
+        .fv_circles{
+            position:absolute;
+            top:165px;
+            left:35px;
+            width:505px;
+            @include md.rps-sw(pc){
+                top:295px;
+                left:218px;
+                width:440px;
+            }
+        }
+        h2 {
+            margin-left: 118px;
+            margin-bottom: 19px;
+            @include md.fontset(vb.$sub-font, 9.0rem, 600, 129px);
+            text-shadow: 2px 2px 4px #f3ffef, 2px -2px 4px #f3ffef, -2px 2px 4px #f3ffef, -2px -2px 4px #f3ffef;
+            color: vb.$green-color;
+            @include md.rps-sw(tab){
+                margin-left:28px;
+                font-size: 6.6rem;
+                line-height: 95px;
+            }
+            .uline {
+                position: relative;
+                z-index: 0;
+
+                &:before {
+                    @include md.uline(9px, 0, 30px);
+                    width: 98%;
+                }
+                .uline-res{
+                    @include md.rps-sw(xl){
+                        display: block;
+                        position: relative;
+                        width: fit-content;
+                        &:before {
+                            @include md.uline(9px, 0, 30px);
+                            width: 98%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .fv_message {
+            margin-left:119px;
+            @include md.fontset(vb.$main-font, 2.0rem, 500, 29px);
+            color: #222;
+            @include md.rps-sw(tab){
+                margin-left:28px;
+            }
+
+            span {
+                display: inline-block;
+                margin-top: 1px;
+                transform: translateX(-12px);
+            }
+        }
+    }
+
+    .fv_contact {
+        position: relative;
+        z-index: 1;
+        margin-top: -31px;
+        padding: 71px 0 100px;
+        background: url(../img/beige_bg.svg) no-repeat top/cover;
+
+        .fv_contact_text {
+            position: relative;
+            margin: 0 auto 41px;
+            width: fit-content;
+            @include md.fontset(vb.$main-font, 2.4rem, 500, 35px);
+            color: #000;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: calc(50% - 3px);
+                width: 13px;
+                height: 28.5px;
+            }
+
+            &:before {
+                left: -10px;
+                background: url(../img/fv_vector_left.svg) no-repeat center/cover;
+                transform: translate(-100%, -50%);
+            }
+
+            &:after {
+                right: -10px;
+                background: url(../img/fv_vector_right.svg) no-repeat center/cover;
+                transform: translate(100%, -50%);
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 986px;
+            margin: 0 auto;
+
+            li {
+                border-radius: 3px;
+                transition: 0.3s;
+
+                @include md.hover {
+                    transform: translate(0, 10%);
+                }
+
+                &.fv_contact_left {
+                    background: linear-gradient(#6cba3c, #d1dc32);
+                }
+
+                &.fv_contact_right {
+                    background: linear-gradient(#ef6811 35%, #FBB856);
+                }
+
+                a {
+                    display: block;
+                    width: 475px;
+                    height: 100px;
+                    border: 4px solid #fff;
+                    border-radius: 3px;
+                    padding-top: 27px;
+                    @include md.fontset(vb.$main-font, 1.6rem, 700, 23px);
+                    text-align: center;
+                    text-shadow: 0px 2px 2px rgba($color: #000, $alpha: 0.25);
+                    color: #fff;
+                    box-shadow: 0px 2px 2px rgba($color: #000, $alpha: 0.25);
+
+                    span {
+                        display: inline-block;
+                        position:relative;
+                        margin-left: -6px;
+
+                        &:after {
+                            content:"";
+                            position: absolute;
+                            top:50%;
+                            right:-11px;
+                            transform: translate(100%,-50%);
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 13px 0 13px 19px;
+                            border-color: transparent transparent transparent #ffffff;
+                            filter:drop-shadow(0px 2px 2px rgba($color: #000, $alpha: 0.25));
+
+                        }
+                    }
+
+                    strong {
+                        line-height: 41px;
+                        font-size: 2.8rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
