@@ -895,7 +895,7 @@ html {
 }
 @media screen and (min-width: 900px) {
   .reason .container .reason_cp {
-    margin-bottom: 33px;
+    margin-bottom: 81px;
     font-size: 3.2rem;
     line-height: 40px;
   }
@@ -965,9 +965,24 @@ html {
     width: 552px;
   }
 }
+.reason .container ul li.list_right {
+  position: relative;
+}
 @media screen and (min-width: 900px) {
   .reason .container ul li.list_right {
     width: 563px;
+  }
+}
+.reason .container ul li.list_right .reason_human_message {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .reason .container ul li.list_right .reason_human_message {
+    display: block;
+    position: absolute;
+    top: -18.2590233546%;
+    left: -39.9644760213%;
+    width: 87.0337477798%;
   }
 }
 .reason .container .reason_access_text {
@@ -1100,12 +1115,18 @@ html {
 
 .access {
   padding: 40px 5% 39.7333333333%;
-  background: url(../img/sec_beige_bg.svg) no-repeat top/100%;
+  background: url(../img/sec_beige_bg.svg) no-repeat top/cover;
 }
 @media screen and (min-width: 900px) {
   .access {
-    padding: 100px 8.3333333333% 100px 6.1805555556%;
-    background: url(../img/sec_beige_bg_pc.svg) no-repeat top/100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .access {
+    padding: 100px 0 6.9444444444%;
+    background: url(../img/sec_beige_bg_pc.svg) no-repeat top/cover;
   }
 }
 .access .container {
@@ -1120,7 +1141,7 @@ html {
 .access .container h2 {
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 20.5333333333%;
+  margin: 0 auto 150px;
   font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   font-weight: 500;
@@ -1131,10 +1152,15 @@ html {
 }
 @media screen and (min-width: 900px) {
   .access .container h2 {
-    margin: 0 0 89px 0;
+    margin-left: 7.6388888889%;
     font-size: 4.8rem;
     line-height: 69px;
     text-align: left;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .access .container h2 {
+    margin-bottom: 74px;
   }
 }
 .access .container h2 .block {
@@ -1145,6 +1171,12 @@ html {
   font-weight: 700;
   line-height: 34px;
   color: #ef6811;
+}
+@media screen and (min-width: 900px) {
+  .access .container h2 .block strong {
+    font-size: 6.4rem;
+    line-height: 94px;
+  }
 }
 .access .container h2 .uline {
   position: relative;
@@ -1159,15 +1191,48 @@ html {
   height: 6px;
   background: url(../img/access_uline.svg) no-repeat center/100%;
 }
+@media screen and (min-width: 900px) {
+  .access .container h2 .uline::before {
+    bottom: -12px;
+    left: -21px;
+    width: calc(100% + 21px);
+    height: 18px;
+    background: url(../img/access_uline_pc.svg) no-repeat center/100%;
+  }
+}
 .access .container h2 .uline.text_position {
   display: inline-block;
   margin-top: 17px;
   padding-right: 4px;
 }
+@media screen and (min-width: 900px) {
+  .access .container h2 .uline.text_position {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .access .container h2 .uline.text_position {
+    margin-right: -62px;
+  }
+}
 .access .container .access_map_layout {
   position: relative;
   max-width: 550px;
   margin: 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .access .container .access_map_layout {
+    max-width: 650px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .access .container .access_map_layout {
+    max-width: 55.4166666667%;
+    margin: 0 8.3333333333% 0 auto;
+  }
 }
 .access .container .access_map_layout .access_bird {
   position: absolute;
@@ -1175,9 +1240,136 @@ html {
   right: 3.1746031746%;
   width: 30.7936507937%;
 }
+@media screen and (min-width: 1000px) {
+  .access .container .access_map_layout .access_bird {
+    top: -30.0527240773%;
+    right: -3.1328320802%;
+    width: 31.0776942356%;
+  }
+}
 .access .container .access_map_layout .access_human {
   position: absolute;
   bottom: -48.4444444444%;
   right: -1.5873015873%;
   width: 70.1587301587%;
+}
+@media screen and (min-width: 1000px) {
+  .access .container .access_map_layout .access_human {
+    bottom: 0.5272407733%;
+    left: -4.1353383459%;
+    width: 50.3759398496%;
+    transform: translateX(-100%);
+  }
+}
+
+.insti {
+  padding: 40px 0 26px;
+}
+@media screen and (min-width: 900px) {
+  .insti {
+    padding: 106px 0 100px;
+  }
+}
+.insti h2 {
+  margin-bottom: 24px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #184422;
+}
+@media screen and (min-width: 900px) {
+  .insti h2 {
+    margin-bottom: 18px;
+    font-size: 3.6rem;
+    line-height: 52px;
+  }
+}
+.insti h2 .block {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .insti h2 .block {
+    display: inline;
+  }
+}
+.insti h2 .text-position {
+  display: inline-block;
+  margin-top: -7px;
+}
+@media screen and (min-width: 900px) {
+  .insti h2 .text-position {
+    margin: 0;
+  }
+}
+.insti h2 strong {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 34px;
+  color: #ef6811;
+}
+@media screen and (min-width: 900px) {
+  .insti h2 strong {
+    font-size: 4.8rem;
+    line-height: 69px;
+  }
+}
+.insti h2 strong::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(216, 221, 25, 0.7);
+}
+@media screen and (min-width: 900px) {
+  .insti h2 strong::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(216, 221, 25, 0.7);
+  }
+}
+.insti .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+@media screen and (min-width: 900px) {
+  .insti .container {
+    max-width: 1440px;
+    padding: 0 7.6388888889%;
+  }
+}
+.insti .container .insti_human {
+  width: 282px;
+  margin: 0 auto 13px;
+}
+@media screen and (min-width: 900px) {
+  .insti .container .insti_human {
+    width: 41.3888888889%;
+    margin: 0 0 40px auto;
+  }
+}
+.insti .container .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media screen and (min-width: 900px) {
+  .insti .container .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 }/*# sourceMappingURL=top.css.map */

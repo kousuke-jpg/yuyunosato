@@ -106,7 +106,7 @@
             @include md.fontset(vb.$main-font, 1.2rem, 400, 17px);
             color: #222;
             @include md.rps-sw(tab){
-                margin-bottom: 33px;
+                margin-bottom: 81px;
                 font-size: 3.2rem;
                 line-height: 40px;
             }
@@ -169,8 +169,19 @@
                     }
                 }
                 &.list_right{
+                    position:relative;
                     @include md.rps-sw(tab){
                         width:563px;
+                    }
+                    .reason_human_message{
+                        display: none;
+                        @include md.rps-sw(tab){
+                            display: block;
+                            position: absolute;
+                            top:md.per(-86,471);
+                            left:md.per(-225,563);
+                            width:md.per(490,563);
+                        }
                     }
                 }
             }
