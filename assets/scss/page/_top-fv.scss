@@ -2,54 +2,92 @@
 @use '../modules/index' as md;
 
 .header_wrap {
-    padding:0 27px;
+    @include md.rps-sw(sp) {
+        padding: 0 27px;
+    }
+
     background-color: vb.$beige-color;
 
     header {
-        height: 81px;
+        @include md.rps-sw(sp) {
+            max-width: 600px;
+        }
+        padding:md.per(7,375) 0 md.per(8,375);
+        max-width: 321px;
+        // height: 35px;
         @include md.flexset(center, space-between);
         margin: 0 auto;
-        max-width: 930px;
+        @include md.rps-sw(tab){
+            // height:81px;
+        }
+        @include md.rps-sw(xl) {
+            padding: 15px 0;
+            max-width: 1000px;
+        }
 
         .hd_left {
-            @include md.flexset(flex-end);
-            gap: 20px;
-            @include md.rps-sw(pc){
-                gap:7px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            @include md.rps-sw(pc2){
+                transform: scale(1.2);
+            }
+            @include md.rps-sw(tab){
+                transform: scale(1.8);
+            }
+            @include md.rps-sw(xl) {
+                gap: 30px;
+                transform: scale(1);
             }
 
             p {
-                padding-bottom: 1px;
+                transform: translateY(1px);
+
+                @include md.rps-sw(xl) {
+                    transform: translateY(13px);
+                }
 
                 strong {
-                    @include md.fontset(vb.$main-font, 2.0rem, 500, 29px);
+                    @include md.fontset(vb.$main-font, 1.0rem, 500, 14px);
                     color: vb.$green-color;
-                    @include md.rps-sw(pc){
-                        font-size: 1.6rem;
+
+                    @include md.rps-sw(xl) {
+                        font-size: 3.0rem;
                     }
 
                 }
             }
 
             h1 {
-                width: 284px;
-                @include md.rps-sw(pc){
-                    width:220px;
+                width: 112px;
+                transform: translateY(-2.5px);
+
+                @include md.rps-sw(xl) {
+                    width: 284px;
+                    transform: translateY(0);
                 }
             }
         }
 
         .hd_right {
+            @include md.rps-sw(pc2){
+                transform: scale(1.2);
+            }
+            @include md.rps-sw(tab){
+                transform: scale(1.8);
+            }
+            @include md.rps-sw(xl){
+                transform: scale(1);
+            }
             p {
                 a {
                     display: block;
-                    @include md.fontset(vb.$main-font, 4.0rem, 500, 58px);
+                    @include md.fontset(vb.$main-font, 1.4rem, 500, 20px);
                     color: vb.$green-color;
-                    transform: translateY(2px);
                     position: relative;
-                    transition: 0.3s;
-                    @include md.rps-sw(pc){
-                        font-size:2.8rem;
+
+                    @include md.rps-sw(xl) {
+                        font-size: 4rem;
                     }
 
                     @include md.hover {
@@ -65,7 +103,7 @@
                         background-color: vb.$green-color;
                         position: absolute;
                         left: 0;
-                        bottom: -3px;
+                        bottom: -15px;
                         transition: 0.3s;
                     }
                 }
@@ -73,17 +111,19 @@
                 a:before {
                     content: "";
                     display: block;
-                    width: 28px;
-                    height: 36px;
+                    width: 10px;
+                    height: 12px;
                     background: url(../img/tel.svg) no-repeat center/cover;
                     position: absolute;
-                    top: calc(50% + 3px);
-                    left: -9px;
+                    top: 50%;
+                    left: -3px;
                     transform: translate(-100%, -50%);
-                    @include md.rps-sw(pc){
-                        left:-3px;
-                        width:20px;
-                        height:26px;
+
+                    @include md.rps-sw(xl) {
+                        top: calc(50% + 3px);
+                        left: -9px;
+                        width: 30px;
+                        height: 36px;
                     }
                 }
             }
@@ -93,79 +133,78 @@
 
 .fv {
     overflow: hidden;
+
     .fv_bg {
         position: relative;
-        padding-top:426px;
-        padding-bottom:84px;
-        background: url(../img/fv_bg.jpg) no-repeat center/cover;
+        height: 426px;
+        background: url(../img/fv_bg.jpg) no-repeat top/cover;
+
+        @include md.rps-sw(pc) {
+            background: url(../img/fv_bg_pc.jpg) no-repeat right/cover;
+        }
+
+        @include md.rps-sw(tab) {
+            height: 717px;
+        }
 
         .anv_logo {
             position: absolute;
-            top: 40px;
-            left: 120px;
-            width: 161px;
-            @include md.rps-sw(tab){
-                top:17px;
-                left:28px;
+            top: 17px;
+            left: md.per(28, 375);
+            min-width: 58px;
+            max-width: 110px;
+            width: md.per(58,375);
+
+            @include md.rps-sw(tab) {
+                top: 40px;
+                left: md.per(120);
+                max-width: 161px;
+                width: 13%;
             }
         }
 
-        .fv_circles{
-            position:absolute;
-            top:165px;
-            left:35px;
-            width:505px;
-            @include md.rps-sw(pc){
-                top:295px;
-                left:218px;
-                width:440px;
+        .fv_group {
+            position: absolute;
+            bottom:75px;
+            left: md.per(28, 375);
+            width:md.per(324,375);
+            @include md.rps-sw(sp){
+                min-width: 324px;
+                max-width: 440px;
+                width:65%;
             }
-        }
-        h2 {
-            margin-left: 118px;
-            margin-bottom: 19px;
-            @include md.fontset(vb.$sub-font, 9.0rem, 600, 129px);
-            text-shadow: 2px 2px 4px #f3ffef, 2px -2px 4px #f3ffef, -2px 2px 4px #f3ffef, -2px -2px 4px #f3ffef;
-            color: vb.$green-color;
-            @include md.rps-sw(tab){
-                margin-left:28px;
-                font-size: 6.6rem;
-                line-height: 95px;
-            }
-            .uline {
-                position: relative;
-                z-index: 0;
-
-                &:before {
-                    @include md.uline(9px, 0, 30px);
-                    width: 98%;
-                }
-                .uline-res{
-                    @include md.rps-sw(xl){
-                        display: block;
-                        position: relative;
-                        width: fit-content;
-                        &:before {
-                            @include md.uline(9px, 0, 30px);
-                            width: 98%;
-                        }
-                    }
-                }
+            @include md.rps-sw(tab) {
+                top: auto;
+                bottom:162px;
+                left: md.per(35);
+                max-width: 1208px;
+                width: 95%;
             }
         }
 
         .fv_message {
-            margin-left:119px;
-            @include md.fontset(vb.$main-font, 2.0rem, 500, 29px);
+            position: absolute;
+            bottom:20px;
+            left: md.per(28, 375);
+            @include md.fontset(vb.$main-font, 1.2rem, 500, 17px);
             color: #222;
-            @include md.rps-sw(tab){
-                margin-left:28px;
+
+            @include md.rps-sw(tab) {
+                top: 574px;
+                left: md.per(119);
+                font-size: 2.4rem;
+                line-height: 35px;
             }
 
             span {
                 display: inline-block;
-                margin-top: 1px;
-                transform: translateX(-12px);
+                margin-top: 5px;
+                transform: translateX(-9px);
+
+                @include md.rps-sw(tab) {
+                    margin: 0;
+                    transform: translateX(-12px);
+                }
             }
         }
     }
@@ -173,100 +212,153 @@
     .fv_contact {
         position: relative;
         z-index: 1;
-        margin-top: -31px;
-        padding: 71px 0 100px;
-        background: url(../img/beige_bg.svg) no-repeat top/cover;
+        margin-top: -15px;
+        padding: 40px 0 20px;
+        background: url(../img/beige_bg_pc.svg) no-repeat top/cover;
+        @include md.rps-sw(sp){
+            padding-right:5%;
+            padding-left:5%;
+        }
+        @include md.rps-sw(tab) {
+            margin-top:-27px;
+            padding: 71px 0 md.per(100);
+
+        }
 
         .fv_contact_text {
             position: relative;
-            margin: 0 auto 41px;
+            margin: 0 auto 10px;
             width: fit-content;
-            @include md.fontset(vb.$main-font, 2.4rem, 500, 35px);
+            @include md.fontset(vb.$main-font, 1.4rem, 500, 20px);
             color: #000;
+
+            @include md.rps-sw(tab) {
+                font-size: 2.4rem;
+                line-height: 35px;
+            }
 
             &:before,
             &:after {
                 content: "";
                 display: block;
                 position: absolute;
-                top: calc(50% - 3px);
-                width: 13px;
-                height: 28.5px;
+                top: 50%;
+                width:8px;
+                height:20px;
+                @include md.rps-sw(tab) {
+                    top: calc(50% - 3px);
+                    width: 13px;
+                    height: 28.5px;
+                }
             }
 
             &:before {
-                left: -10px;
+                left:-4px;
                 background: url(../img/fv_vector_left.svg) no-repeat center/cover;
                 transform: translate(-100%, -50%);
+                @include md.rps-sw(tab){
+                    left: -10px;
+                }
             }
 
             &:after {
-                right: -10px;
+                right:-4px;
                 background: url(../img/fv_vector_right.svg) no-repeat center/cover;
                 transform: translate(100%, -50%);
+                @include md.rps-sw(tab){
+                    right: -10px;
+                }
+                
             }
         }
 
         ul {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 986px;
+            max-width: 321px;
             margin: 0 auto;
+            @include md.rps-sw(sp){
+                max-width: 600px;
+            }
+            @include md.rps-sw(tab){
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 10px;
+                max-width: 986px;
+                
+            }
 
             li {
                 border-radius: 3px;
                 transition: 0.3s;
-
+                margin: 0 auto;
+                &:first-child{
+                    margin-bottom: 10px;
+                    @include md.rps-sw(tab){
+                        margin: 0 auto;
+                    }
+                }
+                
                 @include md.hover {
                     transform: translate(0, 10%);
                 }
-
+                
                 &.fv_contact_left {
                     background: linear-gradient(#6cba3c, #d1dc32);
                 }
-
+                
                 &.fv_contact_right {
                     background: linear-gradient(#ef6811 35%, #FBB856);
                 }
-
+                
                 a {
-                    display: block;
-                    width: 475px;
-                    height: 100px;
-                    border: 4px solid #fff;
+                    border: 2px solid #fff;
                     border-radius: 3px;
-                    padding-top: 27px;
-                    @include md.fontset(vb.$main-font, 1.6rem, 700, 23px);
+                    display: block;
+                    padding:11px 0 14px;
+                    @include md.fontset(vb.$main-font, 1.2rem, 700, 17px);
                     text-align: center;
                     text-shadow: 0px 2px 2px rgba($color: #000, $alpha: 0.25);
                     color: #fff;
                     box-shadow: 0px 2px 2px rgba($color: #000, $alpha: 0.25);
-
+                    @include md.rps-sw(tab){
+                        width: 475px;
+                        border: 4px solid #fff;
+                        padding: 27px 0 24px;
+                        font-size:1.6rem;
+                        line-height: 23px;
+                    }
                     span {
+                        position: relative;
                         display: inline-block;
-                        position:relative;
-                        margin-left: -6px;
-
+                        
                         &:after {
-                            content:"";
+                            content: "";
                             position: absolute;
-                            top:50%;
-                            right:-11px;
-                            transform: translate(100%,-50%);
+                            top: 50%;
+                            right: -11px;
+                            transform: translate(100%, -50%);
                             width: 0;
                             height: 0;
                             border-style: solid;
-                            border-width: 13px 0 13px 19px;
+                            border-width: 6.5px 0 6.5px 12px;
                             border-color: transparent transparent transparent #ffffff;
-                            filter:drop-shadow(0px 2px 2px rgba($color: #000, $alpha: 0.25));
-
+                            filter: drop-shadow(0px 2px 2px rgba($color: #000, $alpha: 0.25));
+                            @include md.rps-sw(tab){
+                                border-width: 13px 0 13px 19px;
+                            }
+                            
                         }
                     }
-
+                    
                     strong {
-                        line-height: 41px;
-                        font-size: 2.8rem;
+                        display: inline-block;
+                        margin-right: 5px;
+                        font-size: 1.6em;
+                        line-height: 23px;
+                        @include md.rps-sw(tab){
+                            font-size: 2.8rem;
+                            line-height: 41px;
+                        }
                     }
 
                 }
@@ -274,4 +366,3 @@
         }
     }
 }
-

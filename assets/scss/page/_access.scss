@@ -2,33 +2,29 @@
 @use '../modules/index' as md;
 
 .access {
-    padding: 40px 5% md.per(149, 375);
+    padding: 40px 0 md.per(149, 375);
     background: url(../img/sec_beige_bg.svg) no-repeat top/cover;
-    @include md.rps-sw(tab){
-        padding-right:0;
-        padding-left: 0;
-    }
     @include md.rps-sw(xl) {
         padding: 100px 0 md.per(100);
         background: url(../img/sec_beige_bg_pc.svg) no-repeat top/cover;
     }
 
-    .container {
-        max-width: 900px;
+    .h2_wrap{
+        max-width: 600px;
         margin: 0 auto;
-
-        @include md.rps-sw(tab) {
-            max-width: 1440px;
+        @include md.rps-sw(tab){
+            max-width: 100%;
         }
-
-        h2 {
+    }
+    h2 {
             width: fit-content;
-            margin: 0 auto 150px;
+            margin: 0 auto md.per(74,375);
             @include md.fontset(vb.$sub-font, 2.0rem, 500, 29px);
             text-align: right;
             color: vb.$middle-green-color;
-
+            
             @include md.rps-sw(tab) {
+                margin-bottom:170px;
                 margin-left:md.per(110);
                 font-size: 4.8rem;
                 line-height: 69px;
@@ -37,7 +33,7 @@
             @include md.rps-sw(xxl){
                 margin-bottom: 74px;
             }
-
+            
             .block {
                 display: block;
                 strong {
@@ -51,10 +47,10 @@
                     }
                 }
             }
-
+            
             .uline {
                 position: relative;
-
+                
                 &::before {
                     content: "";
                     display: block;
@@ -72,7 +68,7 @@
                         background: url(../img/access_uline_pc.svg) no-repeat center/100%;
                     }
                 }
-
+                
                 &.text_position {
                     display: inline-block;
                     margin-top: 17px;
@@ -88,7 +84,14 @@
                 }
             }
         }
-
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding:0 5%;
+            @include md.rps-sw(tab) {
+                max-width: 1440px;
+            }
         .access_map_layout {
             position: relative;
             max-width: 550px;
@@ -105,11 +108,11 @@
                 position: absolute;
                 top: md.per(-62, 225);
                 right: md.per(10, 315);
-                width: md.per(97, 315);
+                width: md.per(131, 315);
                 @include md.rps-sw(xl){
-                    top:md.per(-171,569);
+                    top:md.per(-215,569);
                     right:md.per(-25,798);
-                    width:md.per(248,798);
+                    width:md.per(270.65,798);
                 }
             }
 
@@ -117,7 +120,7 @@
                 position: absolute;
                 bottom: md.per(-109, 225);
                 right: md.per(-5, 315);
-                width: md.per(221, 315);
+                width: md.per(265, 315);
                 @include md.rps-sw(xl){
                     bottom:md.per(3,569);
                     left:md.per(-33,798);

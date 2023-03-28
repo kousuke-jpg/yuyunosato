@@ -5,10 +5,12 @@
 
 $breakpoints: (
   'xs': (min-width: 0),
-  'sp': (min-width: 470px),
-  'pc': (min-width: 768px),
+  'sp': (min-width: 375px),
+  'pc': (min-width: 500px),
+  'pc2': (min-width: 600px),
   'tab': (min-width: 900px),
   'xl': (min-width: 1000px),
+  'xl2': (min-width: 1200px),
   'xxl': (min-width: 1440px)
 ) !default;
 

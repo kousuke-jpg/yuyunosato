@@ -3,270 +3,329 @@
 
 .reason {
     padding: 28px 5% 32px;
-    @include md.rps-sw(tab){
-        padding:100px 5% ;
+    overflow: hidden;
+
+    @include md.rps-sw(tab) {
+        padding: 100px 0;
     }
 
-    .container {
-        max-width: 600px;
-        margin: 0 auto;
-        @include md.rps-sw(tab){
-            max-width: 1440px;
+
+    h2 {
+        margin-bottom: 10px;
+        @include md.fontset(vb.$sub-font, 2.0rem, 600, 29px);
+        text-align: center;
+        color: vb.$green-color;
+
+        @include md.rps-sw(tab) {
+            margin-bottom: 25px;
+            font-size: 6.0rem;
+            line-height: 92px;
+        }
+        @include md.rps-sw(xl){
+            font-size: 6.4rem;
         }
 
-        h2 {
-            margin-bottom: 10px;
-            @include md.fontset(vb.$sub-font, 2.0rem, 600, 29px);
-            text-align: center;
-            color: vb.$green-color;
-            @include md.rps-sw(tab){
-                margin-bottom:25px;
-                font-size:6.4rem;
-                line-height:92px;
+        .text-position {
+            display: inline-block;
+            transform: translateX(8px);
+
+            @include md.rps-sw(tab) {
+                transform: translateX(32px);
             }
-            img {
-                display: inline-block;
-                width: 172px;
-                margin: 0 4px 0 8px;
-                transform: translateY(-5px);
-                @include md.rps-sw(tab){
-                    width:527px;
-                    margin:0 9px 0 24px;
-                    transform: translateY(-14px);
-                }
-            }
+        }
+    }
 
-            .inline-block {
-                display: inline-block;
-                position: relative;
-                margin-top: -3px;
-                font-size: 2.4rem;
-                line-height: 34px;
-                @include md.rps-sw(tab){
-                    margin-top: -11px;
-                    font-size:6.4rem;
-                    line-height:92px;
-                }
-                &::before,
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: calc(50% - 2px);
-                    width: 50px;
-                    height: 1px;
-                    background-color: vb.$green-color;
-                    @include md.rps-sw(tab){
-                        width:120px;
-                        height:2px;
-                        top:calc(50% + 21px);
-                    }
-                }
+    .inline-block {
+        position: relative;
+        display: inline-block;
+        position: relative;
+        margin-top: -3px;
+        font-size: 2.4rem;
+        line-height: 34px;
+        color: vb.$orange-color;
 
-                &::before {
-                    left: -50px;
-                    transform: translate(-100%, -50%) rotate(57.6deg);
-                    @include md.rps-sw(tab){
-                        left:md.per(-182);
-                        transform: translate(-100%, -50%) rotate(48deg);
-                    }
-                    @include md.rps-sw(xl){
-                        left:-182px;
-                    }
-                }
+        @include md.rps-sw(tab) {
+            margin-top: -11px;
+            font-size: 6.4rem;
+            line-height: 92px;
+        }
 
-                &::after {
-                    right: -50px;
-                    transform: translate(100%, -50%) rotate(-57.6deg);
-                    @include md.rps-sw(tab){
-                        right:md.per(-182);
-                        transform: translate(100%, -50%) rotate(-48deg);
-                    }
-                    @include md.rps-sw(xl){
-                        right:-182px;
-                    }
-                }
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(50% - 2px);
+            width: 50px;
+            height: 1px;
+            background-color: vb.$green-color;
 
-                strong {
-                    font-size: 3.2rem;
-                    font-weight: 600;
-                    line-height: 46px;
-                    @include md.rps-sw(tab){
-                        font-size:9.6rem;
-                        line-height: 132px;
-                    }
-                }
+            @include md.rps-sw(tab) {
+                width: 120px;
+                height: 2px;
+                top: calc(50% + 21px);
             }
         }
 
-        .reason_cp {
+        &::before {
+            left: -50px;
+            transform: translate(-100%, -50%) rotate(57.6deg);
+
+            @include md.rps-sw(tab) {
+                left: md.per(-182);
+                transform: translate(-100%, -50%) rotate(48deg);
+            }
+
+            @include md.rps-sw(xl) {
+                left: -182px;
+            }
+        }
+
+        &::after {
+            right: -50px;
+            transform: translate(100%, -50%) rotate(-57.6deg);
+
+            @include md.rps-sw(tab) {
+                right: md.per(-182);
+                transform: translate(100%, -50%) rotate(-48deg);
+            }
+
+            @include md.rps-sw(xl) {
+                right: -182px;
+            }
+        }
+
+        strong {
             position: relative;
-            width: fit-content;
-            margin: 0 auto 11px;
-            @include md.fontset(vb.$main-font, 1.2rem, 400, 17px);
-            color: #222;
-            @include md.rps-sw(tab){
-                margin-bottom: 81px;
-                font-size: 3.2rem;
-                line-height: 40px;
-            }
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 46px;
 
-            &::before,
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 50%;
-                width: 22px;
-                height: 1px;
-                background-color: #222;
-                @include md.rps-sw(tab){
-                    width:60px;
-                    height:1.5px;
-                }
+            @include md.rps-sw(tab) {
+                font-size: 9.6rem;
+                line-height: 132px;
             }
 
             &::before {
-                left: -3px;
-                transform: translate(-100%, -50%);
-                @include md.rps-sw(tab){
-                    left:-6px;
-                }
-            }
+                @include md.uline(5px, 0, 8px);
+                width: 144px;
 
-            &::after {
-                right: -3px;
-                transform: translate(100%, -50%);
-                @include md.rps-sw(tab){
-                    right:-6px;
+                @include md.rps-sw(tab) {
+                    @include md.uline(14px, 0, 26px);
+                    width: 416px;
                 }
             }
         }
-
+    }
+    .reason_cp {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto 11px;
+        @include md.fontset(vb.$main-font, 1.2rem, 400, 17px);
+        color: #222;
+    
+        @include md.rps-sw(tab) {
+            margin-bottom: 81px;
+            font-size: 3.2rem;
+            line-height: 40px;
+        }
+    
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 22px;
+            height: 1px;
+            background-color: #222;
+    
+            @include md.rps-sw(tab) {
+                width: 60px;
+                height: 1.5px;
+            }
+        }
+    
+        &::before {
+            left: -3px;
+            transform: translate(-100%, -50%);
+    
+            @include md.rps-sw(tab) {
+                left: -6px;
+            }
+        }
+    
+        &::after {
+            right: -3px;
+            transform: translate(100%, -50%);
+    
+            @include md.rps-sw(tab) {
+                right: -6px;
+            }
+        }
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 5%;
+    
+        @include md.rps-sw(tab) {
+            max-width: 1440px;
+        }
+    
         ul {
-            margin-bottom: 10px;
-            @include md.rps-sw(tab){
+            margin-bottom: 26px;
+    
+            @include md.rps-sw(tab) {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                gap:42px;
-                max-width: 1157px;
+                align-items: flex-end;
+                gap: 42px;
                 margin: 0 auto 20px;
-
+    
             }
-            li{
-                margin:0 auto;
+    
+            li {
+                margin: 0 auto;
                 max-width: 500px;
-                @include md.rps-sw(tab){
+    
+                @include md.rps-sw(tab) {
                     margin: 0;
                     max-width: 100%;
                 }
-                &.list_left{
+    
+                &.list_left {
                     margin-bottom: 10px;
-                    @include md.rps-sw(tab){
+    
+                    @include md.rps-sw(tab) {
+                        position: relative;
+                        z-index: 1;
                         margin: 0;
-                        width:552px;
+                        width: 552px;
                     }
                 }
-                &.list_right{
-                    position:relative;
-                    @include md.rps-sw(tab){
-                        width:563px;
+    
+                &.list_right {
+                    position: relative;
+    
+                    @include md.rps-sw(tab) {
+                        z-index: 0;
+                        width: 645px;
+                        transform: translate(md.per(-84, 645), md.per(-16, 416));
                     }
-                    .reason_human_message{
+    
+                    .reason_human_message {
                         display: none;
-                        @include md.rps-sw(tab){
+    
+                        @include md.rps-sw(tab) {
                             display: block;
                             position: absolute;
-                            top:md.per(-86,471);
-                            left:md.per(-225,563);
-                            width:md.per(490,563);
+                            top: md.per(-100, 416);
+                            right: md.per(259, 645);
+                            width: md.per(490, 645);
                         }
                     }
                 }
             }
         }
-
+    
         .reason_access_text {
             @include md.fontset(vb.$sub-font, 2.4rem, 600, 34px);
             text-align: center;
             color: vb.$green-color;
-            @include md.rps-sw(tab){
-                font-size:4.8rem;
-                line-height:69px;
+    
+            @include md.rps-sw(tab) {
+                font-size: 4.8rem;
+                line-height: 69px;
             }
-
+    
             .main-font {
                 @include md.fontset(vb.$main-font, 1.6rem, 400, 16px);
-                @include md.rps-sw(tab){
-                    font-size:3.2rem;
+    
+                @include md.rps-sw(tab) {
+                    font-size: 3.2rem;
                     line-height: 46px;
                 }
             }
-
+    
             .block {
                 display: block;
-                @include md.rps-sw(tab){
+    
+                @include md.rps-sw(tab) {
                     display: inline;
                 }
+    
                 strong {
                     display: inline-block;
                     margin-right: 6px;
-                    @include md.rps-sw(tab){
+    
+                    @include md.rps-sw(tab) {
                         margin-right: 5px;
                     }
                 }
             }
-@include md.rps-sw(tab){
-    .text-position-pc{
-        display: inline-block;
-        transform: translateX(-17px);
-    }
-}
+    
+            @include md.rps-sw(tab) {
+                .text-position-pc {
+                    display: inline-block;
+                    transform: translateX(-17px);
+                }
+            }
+    
             .text-position {
                 display: inline-block;
                 transform: translateX(10px);
-                @include md.rps-sw(tab){
+    
+                @include md.rps-sw(tab) {
                     transform: translateX(22px);
                 }
             }
-
+    
             strong {
                 position: relative;
                 @include md.fontset(vb.$sub-font, 2.4rem, 600, 34px);
                 color: vb.$orange-color;
-                @include md.rps-sw(tab){
-                    font-size:4.8rem;
-                    line-height:69px;
+    
+                @include md.rps-sw(tab) {
+                    font-size: 4.8rem;
+                    line-height: 69px;
                 }
-
+    
                 &.text-position-st {
                     display: inline-block;
                     margin-left: -8px;
-                    @include md.rps-sw(tab){
+    
+                    @include md.rps-sw(tab) {
                         margin-right: 4px;
-                        margin-left:-18px;
+                        margin-left: -18px;
                     }
                 }
-
+    
                 &:before {
                     @include md.uline(0, 0, 8px);
-                    @include md.rps-sw(tab){
-                        width:calc(100% + 10px) !important;
-                        @include md.uline(-2px,50%,26px);
-                        transform:translateX(-50%);
+    
+                    @include md.rps-sw(tab) {
+                        width: calc(100% + 10px) !important;
+                        @include md.uline(-2px, 50%, 26px);
+                        transform: translateX(-50%);
                     }
                 }
             }
-            .sub_t{
+    
+            .sub_t {
                 display: inline-block;
                 margin-top: 3px;
-                @include md.fontset(vb.$main-font,1.2rem,500,20px);
-                @include md.rps-sw(tab){
+                @include md.fontset(vb.$main-font, 1.2rem, 500, 20px);
+    
+                @include md.rps-sw(tab) {
                     margin-top: 23px;
-                    font-size:3.2rem;
+                    font-size: 3.0rem;
                     line-height: 46px;
-
+    
+                }
+                @include md.rps-sw(xl){
+                    font-size: 3.2rem;
                 }
             }
         }
