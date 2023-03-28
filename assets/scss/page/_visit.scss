@@ -1,0 +1,16 @@
+@use '../bases/variables' as vb;
+@use '../modules/index' as md;
+
+.visit{
+    padding:48px 0 40px;
+    @include md.rps-sw(tab){
+        padding:100px 8% 97px;
+    }
+    .container{
+        max-width:600px;
+        margin: 0 auto;
+        @include md.rps-sw(tab){
+            max-width: 1100px;
+        }
+    }
+}

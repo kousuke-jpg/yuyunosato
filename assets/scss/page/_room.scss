@@ -1,0 +1,331 @@
+@use '../bases/variables' as vb;
+@use '../modules/index' as md;
+
+.room{
+    padding:40px 0;
+    @include md.rps-sw(tab){
+        padding: 47px 0 100px;
+    }
+    h2{
+        margin-bottom:20px;
+        @include md.fontset(vb.$sub-font,1.6rem,700,23px);
+        text-align: center;
+        color: vb.$green-color;
+        @include md.rps-sw(tab){
+            margin-bottom: 40px;
+            font-size: 3.6rem;
+            line-height: 52px;
+        }
+        .block_pc{
+            display: block;
+            margin-bottom:5px;
+            @include md.rps-sw(tab){
+                margin-bottom: 20px;
+            }
+        }
+        .block{
+            display: block;
+            margin-bottom: 5px;
+            @include md.rps-sw(tab){
+                display: inline;
+            }
+        }
+        strong{
+            position: relative;
+            font-size:2.0rem;
+            line-height:29px;
+            color:vb.$orange-color;
+            @include md.rps-sw(tab){
+                font-size: 4.8rem;
+                font-weight: 600;
+                line-height: 69px;
+            }
+            &::before{
+                @include md.uline(2px,0,7px);
+                @include md.rps-sw(tab){
+                    @include md.uline(4px,0,20px);
+                }
+            }
+            &.fw_sb{
+                font-weight: 600;
+            }
+            &.fs_16{
+                font-size:1.6rem;
+                line-height: 23px;
+                @include md.rps-sw(tab){
+                    font-size: 4.8rem;
+                    line-height: 69px;
+                }
+            }
+            &.inline-block{
+                display: inline-block;
+            }
+        }
+    }
+    .container{
+        max-width: 600px;
+        margin:0 auto;
+        padding:0 5%;
+        @include md.rps-sw(tab){
+            max-width: 1440px;
+            padding:0;
+        }
+    }
+    ul{
+        margin-bottom:20px;
+        @include md.rps-sw(tab){
+            display: flex;
+            justify-content: space-between;
+            margin-bottom:46px;
+        }
+        li{
+            @include md.rps-sw(tab){
+                width:md.per(537);
+            }
+            &:first-child{
+                margin-bottom:10px;
+                @include md.rps-sw(tab){
+                    margin:0 0 0 md.per(144);
+                }
+            }
+            &:last-child{
+                @include md.rps-sw(tab){
+                    margin-right:md.per(144);
+                }
+            }
+        }
+    }
+    article{
+        max-width: 600px;
+        margin: 0 auto;
+        padding:20px 0 28px;
+        border-radius: 7px;
+        background-color: vb.$orange-color;
+        @include md.rps-sw(tab){
+            max-width: 1440px;
+            padding:62px 0 40px;
+        }
+        .point{
+            display: inline-block;
+            position:relative;
+            &::before{
+                content:"";
+                position:absolute;
+                border-radius: 50%;
+                left:50%;
+            }
+            &.white{
+                &::before{
+                    top:0;
+                    width:4px;
+                    height:4px;
+                    background-color: #fff;
+                    @include md.rps-sw(tab){
+                        top:-14px;
+                        width:8px;
+                        height:8px;
+                    }
+                }
+            }
+            &.orange{
+                &::before{
+                    top:-5px;
+                    transform: translateX(-50%);
+                    width:6px;
+                    height:6px;
+                    background-color: vb.$orange-color;
+                    @include md.rps-sw(tab){
+                        top: -3px;
+                        width:8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+        h3{
+            position:relative;
+            width:fit-content;
+            margin: 0 auto 18px;
+            @include md.fontset(vb.$sub-font,1.6rem,700,23px);
+            color:#222;
+            @include md.rps-sw(tab){
+                margin-bottom: 22px;
+                font-size: 3.6rem;
+                line-height: 52px;
+            }
+            &::before,&::after{
+                content:"";
+                position: absolute;
+                top:calc(50% + 3px);
+                width:32px;
+                height:1px;
+                background-color: #222;
+                @include md.rps-sw(tab){
+                    top:50%;
+                    width:64px;
+                    height: 2px;
+                }
+            }
+            &::before{
+                left:5px;
+                transform: translate(-100%,-50%) rotate(56.74deg);
+                @include md.rps-sw(tab){
+                    left:17px;
+                }
+            }
+            &::after{
+                right:5px;
+                transform: translate(100%,-50%) rotate(-56.74deg);
+                @include md.rps-sw(tab){
+                    right:17px;
+                }
+            }
+            strong{
+                font-size:2.4rem;
+                line-height: 34px;
+                color:#fff;
+                @include md.rps-sw(tab){
+                    font-size: 4.8rem;
+                    line-height: 69px;
+                }
+            }
+        }
+        .white_area{
+            margin: 0 23px;
+            padding:40px 0 42px;
+            border-radius: 7px;
+            background-color: #fff;
+            @include md.rps-sw(tab){
+                margin: 0 63px;
+                padding: 68px 0 40px;
+            }
+            .price{
+                position:relative;
+                margin-bottom: 44px;
+                padding: 0 23px;
+                text-align: center;
+                @include md.fontset(vb.$main-font,1.6rem,400,23px);
+                @include md.rps-sw(tab){
+                    margin-bottom: 35px;
+                    padding: 0;
+                }
+                &::before,&::after{
+                    position:absolute;
+                    left:50%;
+                    transform: translateX(-50%);
+                    content:"";
+                    width:271px;
+                    height:1px;
+                    background-color: #222;
+                    @include md.rps-sw(tab){
+                        width:715px;
+                    }
+                }
+                &::before{
+                    top:-16px;
+                    @include md.rps-sw(tab){
+                        top:-11px;
+                    }
+                }
+                &::after{
+                    bottom:-25px;
+                    @include md.rps-sw(tab){
+                        bottom:-13px;
+                    }
+                }
+                span{
+                    font-size: 6.4rem;
+                    font-weight: 500;
+                    line-height: 64px;
+                    color: vb.$orange-color;
+                    @include md.rps-sw(tab){
+                        font-size: 96px;
+                        line-height: 96px;
+                    }
+                    &.text-center{
+                        display: block;
+                        margin-bottom: 3px;
+                        font-size:1.6rem;
+                        font-weight: 400;
+                        line-height: 23px;
+                        text-align: center;
+                        color:#222;
+                        @include md.rps-sw(tab){
+                            display: inline-block;
+                            margin:0 28px 0 0;
+                            font-size: 3.2rem;
+                            line-height: 46px;
+                            transform: translateY(-17px);
+                        }
+                    }
+                    &.text-position{
+                        display: inline-block;
+                        font-size: 3.2rem;
+                        line-height:46px;
+                        color:#222;
+                        transform: translate(-1px,-2px);
+                        @include md.rps-sw(tab){
+                            margin: 21px 0 0 10px;
+                            font-size: 6.4rem;
+                            line-height: 93px;
+                            transform: translate(0);
+
+                        }
+                    }
+                }
+                img{
+                    display: inline-block;
+                    margin-left: 11px;
+                    width:71px;
+                    @include md.rps-sw(tab){
+                        margin-left: 44px;
+                        width:117px;
+                    }
+                }
+            }
+            .life{
+                margin-bottom: 18px;
+                @include md.fontset(vb.$main-font,2.0rem,400,29px);
+                text-align: center;
+                color:#222;
+                @include md.rps-sw(tab){
+                    margin-bottom: 25px;
+                    font-size: 3.2rem;
+                    line-height: 46px;
+                }
+                .text-position{
+                    display: inline-block;
+                    transform: translateX(10px);
+                    @include md.rps-sw(tab){
+                        transform: translateX(14px);
+                    }
+                }
+                .block{
+                    display: block;
+                    margin-top: 16px;
+                    @include md.rps-sw(tab){
+                        display: inline;
+                    }
+                }
+                .text_orange{
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    line-height: 41px;
+                    color:vb.$orange-color;
+                    @include md.rps-sw(tab){
+                        font-size: 3.6rem;
+                        line-height: 52px;
+                    }
+                }
+            }
+            .room_des{
+                @include md.fontset(vb.$main-font,1.4rem,400,20px);
+                text-align: center;
+                @include md.rps-sw(tab){
+                    font-size: 2.4rem;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+}

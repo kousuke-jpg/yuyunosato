@@ -1,0 +1,108 @@
+@use '../bases/variables' as vb;
+@use '../modules/index' as md;
+
+.food{
+    padding:56px 0 40px;
+    @include md.rps-sw(tab){
+        padding:100px 0 ;
+    }
+    h2{
+        margin-bottom:20px;
+        @include md.fontset(vb.$sub-font,1.6rem,700,23px);
+        text-align: center;
+        color:vb.$green-color;
+        @include md.rps-sw(tab){
+            margin-bottom:60px;
+            font-size: 3.2rem;
+            line-height: 52px;
+        }
+        @include md.rps-sw(xl){
+            font-size: 3.6rem;
+        }
+        .block{
+            display: block;
+            @include md.rps-sw(tab){
+                display: inline;
+            }
+        }
+        strong{
+            position: relative;
+            font-size: 2.4rem;
+            font-weight:600;
+            line-height: 34px;
+            color: vb.$orange-color;
+            @include md.rps-sw(tab){
+                font-size:4.8rem;
+                line-height: 69px;
+            }
+            &::before{
+                @include md.uline(3px,0,7px);
+                @include md.rps-sw(tab){
+                    @include md.uline(0,0,30px);
+                }
+            }
+
+        }
+    }
+    .container{
+        max-width:600px;
+        margin: 0 auto;
+        padding: 0 5%;
+        @include md.rps-sw(tab){
+            max-width: 1440px;
+        }
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+        gap:10px;
+        margin-bottom:20px;
+        @include md.rps-sw(tab){
+            grid-template-columns: repeat(auto-fit,minmax(255px,1fr));
+            gap:60px 20px;
+            max-width: 910px;
+            margin: 0 auto 60px;
+        }
+        li{
+            border-radius:7px;
+            p{
+                margin-top:2px;
+                @include md.fontset(vb.$main-font,1.2rem,400,17px);
+                @include md.rps-sw(tab){
+                    margin-top: 10px;
+                    font-size:1.6rem;
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+    .food_text{
+        width:290px;
+        margin: 0 auto 16px;
+        @include md.fontset(vb.$main-font,1.0rem,400,20px);
+        color:vb.$green-color;
+        @include md.rps-sw(tab){
+            width:813px;
+            margin-bottom:63px;
+            font-size:2.4rem;
+            line-height: 50px;
+        }
+        img{
+            display: inline-block;
+            width:79px;
+            transform: translateY(-5px);
+            @include md.rps-sw(tab){
+                width:189px;
+                transform: translateY(-15px);
+            }
+        }
+    }
+    .food_btn{
+        max-width: 742px;
+        margin: 0 auto;
+        transition: 0.3s;
+        @include md.hover{
+            transform: translateY(5%);
+        }
+    }
+}
