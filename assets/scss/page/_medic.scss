@@ -194,8 +194,8 @@
         color:#222;
         @include md.rps-sw(tab){
             margin-bottom:21px;
-            font-size: 2.4rem;
-            line-height:35px;
+            font-size: 3.2rem;
+            line-height:46px;
         }
         &::before,&::after{
             content:"";

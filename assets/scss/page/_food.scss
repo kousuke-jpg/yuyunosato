@@ -4,7 +4,7 @@
 .food{
     padding:40px 0 40px;
     @include md.rps-sw(tab){
-        padding:100px 0 ;
+        padding:100px 0 153px;
     }
     h2{
         margin-bottom:20px;
@@ -82,7 +82,7 @@
         @include md.fontset(vb.$main-font,1.0rem,400,20px);
         color:vb.$green-color;
         @include md.rps-sw(tab){
-            width:813px;
+            width:825px;
             margin-bottom:63px;
             font-size:2.4rem;
             line-height: 50px;

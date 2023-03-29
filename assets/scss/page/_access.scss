@@ -5,7 +5,7 @@
     padding: 40px 0 md.per(149, 375);
     background: url(../img/sec_beige_bg.svg) no-repeat top/cover;
     @include md.rps-sw(xl) {
-        padding: 100px 0 md.per(100);
+        padding: 100px 0 100px;
         background: url(../img/sec_beige_bg_pc.svg) no-repeat top/cover;
     }
 

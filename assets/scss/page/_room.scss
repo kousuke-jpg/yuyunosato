@@ -85,14 +85,19 @@
             &:first-child{
                 margin-bottom:10px;
                 @include md.rps-sw(tab){
-                    margin:0 0 0 md.per(144);
+                    margin:0 0 0 md.per(143);
                 }
             }
             &:last-child{
                 @include md.rps-sw(tab){
-                    margin-right:md.per(144);
+                    margin-right:md.per(143);
                 }
             }
+        }
+    }
+    .article_container{
+        @include md.rps-sw(tab){
+            padding:3%;
         }
     }
     article{
@@ -102,7 +107,7 @@
         border-radius: 7px;
         background-color: vb.$orange-color;
         @include md.rps-sw(tab){
-            max-width: 1440px;
+            max-width: 1100px;
             padding:62px 0 40px;
         }
         .point{

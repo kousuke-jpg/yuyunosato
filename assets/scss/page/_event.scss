@@ -5,7 +5,7 @@
     padding: 42px 0 52px;
     background: url(../img/event_bg.svg) no-repeat top/cover;
     @include md.rps-sw(tab){
-        padding:108px 0 154px;
+        padding:108px 0 100px;
         background: url(../img/event_bg_pc.svg) no-repeat top/cover;
     }
 
