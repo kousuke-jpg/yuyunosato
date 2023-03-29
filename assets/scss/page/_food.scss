@@ -2,7 +2,7 @@
 @use '../modules/index' as md;
 
 .food{
-    padding:56px 0 40px;
+    padding:40px 0 40px;
     @include md.rps-sw(tab){
         padding:100px 0 ;
     }
@@ -86,15 +86,6 @@
             margin-bottom:63px;
             font-size:2.4rem;
             line-height: 50px;
-        }
-        img{
-            display: inline-block;
-            width:79px;
-            transform: translateY(-5px);
-            @include md.rps-sw(tab){
-                width:189px;
-                transform: translateY(-15px);
-            }
         }
     }
     .food_btn{

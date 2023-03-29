@@ -465,12 +465,17 @@ html {
 }
 @media screen and (min-width: 375px) {
   .header_wrap {
-    padding: 0 27px;
+    padding: 0 26px 0 17px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header_wrap {
+    padding-left: 26px;
   }
 }
 .header_wrap header {
   padding: 1.8666666667% 0 2.1333333333%;
-  max-width: 321px;
+  max-width: 332px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -520,7 +525,7 @@ html {
 }
 .header_wrap header .hd_left p strong {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 0;
@@ -627,7 +632,7 @@ html {
 .fv .fv_bg .anv_logo {
   position: absolute;
   top: 17px;
-  left: 7.4666666667%;
+  left: 28px;
   min-width: 58px;
   max-width: 110px;
   width: 15.4666666667%;
@@ -643,7 +648,7 @@ html {
 .fv .fv_bg .fv_group {
   position: absolute;
   bottom: 75px;
-  left: 7.4666666667%;
+  left: 24px;
   width: 86.4%;
 }
 @media screen and (min-width: 375px) {
@@ -657,7 +662,7 @@ html {
   .fv .fv_bg .fv_group {
     top: auto;
     bottom: 162px;
-    left: 2.4305555556%;
+    left: 1.9444444444%;
     max-width: 1208px;
     width: 95%;
   }
@@ -665,7 +670,7 @@ html {
 .fv .fv_bg .fv_message {
   position: absolute;
   bottom: 20px;
-  left: 7.4666666667%;
+  left: 28px;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -701,8 +706,8 @@ html {
 }
 @media screen and (min-width: 375px) {
   .fv .fv_contact {
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 26px;
+    padding-left: 28px;
   }
 }
 @media screen and (min-width: 900px) {
@@ -725,6 +730,7 @@ html {
 }
 @media screen and (min-width: 900px) {
   .fv .fv_contact .fv_contact_text {
+    margin-bottom: 40px;
     font-size: 2.4rem;
     line-height: 35px;
   }
@@ -855,7 +861,7 @@ html {
 .fv .fv_contact ul li a strong {
   display: inline-block;
   margin-right: 5px;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   line-height: 23px;
 }
 @media screen and (min-width: 900px) {
@@ -866,7 +872,7 @@ html {
 }
 
 .reason {
-  padding: 28px 5% 32px;
+  padding: 28px 0 32px;
   overflow: hidden;
 }
 @media screen and (min-width: 900px) {
@@ -1090,7 +1096,7 @@ html {
   }
 }
 .reason .container ul li.list_left {
-  margin-bottom: 10px;
+  margin-bottom: 18.3703703704%;
 }
 @media screen and (min-width: 900px) {
   .reason .container ul li.list_left {
@@ -1111,33 +1117,34 @@ html {
   }
 }
 .reason .container ul li.list_right .reason_human_message {
-  display: none;
+  position: absolute;
+  top: -33.5483870968%;
+  right: 0.625%;
+  width: 98.125%;
 }
 @media screen and (min-width: 900px) {
   .reason .container ul li.list_right .reason_human_message {
-    display: block;
-    position: absolute;
     top: -24.0384615385%;
     right: 40.1550387597%;
     width: 75.9689922481%;
   }
 }
-.reason .container .reason_access_text {
+.reason .reason_access_text {
   font-family: "Noto Serif JP", serif;
   font-size: 2.4rem;
   font-weight: 600;
-  line-height: 34px;
+  line-height: 0;
   letter-spacing: 0;
   text-align: center;
   color: #184422;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text {
+  .reason .reason_access_text {
     font-size: 4.8rem;
     line-height: 69px;
   }
 }
-.reason .container .reason_access_text .main-font {
+.reason .reason_access_text .main-font {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -1145,44 +1152,44 @@ html {
   letter-spacing: 0;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .main-font {
+  .reason .reason_access_text .main-font {
     font-size: 3.2rem;
     line-height: 46px;
   }
 }
-.reason .container .reason_access_text .block {
+.reason .reason_access_text .block {
   display: block;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .block {
+  .reason .reason_access_text .block {
     display: inline;
   }
 }
-.reason .container .reason_access_text .block strong {
+.reason .reason_access_text .block strong {
   display: inline-block;
   margin-right: 6px;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .block strong {
+  .reason .reason_access_text .block strong {
     margin-right: 5px;
   }
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .text-position-pc {
+  .reason .reason_access_text .text-position-pc {
     display: inline-block;
     transform: translateX(-17px);
   }
 }
-.reason .container .reason_access_text .text-position {
+.reason .reason_access_text .text-position {
   display: inline-block;
   transform: translateX(10px);
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .text-position {
+  .reason .reason_access_text .text-position {
     transform: translateX(22px);
   }
 }
-.reason .container .reason_access_text strong {
+.reason .reason_access_text strong {
   position: relative;
   font-family: "Noto Serif JP", serif;
   font-size: 2.4rem;
@@ -1192,22 +1199,22 @@ html {
   color: #ef6811;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text strong {
+  .reason .reason_access_text strong {
     font-size: 4.8rem;
     line-height: 69px;
   }
 }
-.reason .container .reason_access_text strong.text-position-st {
+.reason .reason_access_text strong.text-position-st {
   display: inline-block;
   margin-left: -8px;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text strong.text-position-st {
+  .reason .reason_access_text strong.text-position-st {
     margin-right: 4px;
     margin-left: -18px;
   }
 }
-.reason .container .reason_access_text strong:before {
+.reason .reason_access_text strong:before {
   content: "";
   display: block;
   position: absolute;
@@ -1219,7 +1226,7 @@ html {
   background-color: rgba(216, 221, 25, 0.7);
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text strong:before {
+  .reason .reason_access_text strong:before {
     width: calc(100% + 10px) !important;
     content: "";
     display: block;
@@ -1233,8 +1240,8 @@ html {
     transform: translateX(-50%);
   }
 }
-.reason .container .reason_access_text .sub_t {
-  display: inline-block;
+.reason .reason_access_text .sub_t {
+  display: block;
   margin-top: 3px;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.2rem;
@@ -1243,14 +1250,14 @@ html {
   letter-spacing: 0;
 }
 @media screen and (min-width: 900px) {
-  .reason .container .reason_access_text .sub_t {
+  .reason .reason_access_text .sub_t {
     margin-top: 23px;
     font-size: 3rem;
     line-height: 46px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .reason .container .reason_access_text .sub_t {
+  .reason .reason_access_text .sub_t {
     font-size: 3.2rem;
   }
 }
@@ -1741,7 +1748,7 @@ html {
 }
 
 .food {
-  padding: 56px 0 40px;
+  padding: 40px 0 40px;
 }
 @media screen and (min-width: 900px) {
   .food {
@@ -1873,17 +1880,6 @@ html {
     margin-bottom: 63px;
     font-size: 2.4rem;
     line-height: 50px;
-  }
-}
-.food .food_text img {
-  display: inline-block;
-  width: 79px;
-  transform: translateY(-5px);
-}
-@media screen and (min-width: 900px) {
-  .food .food_text img {
-    width: 189px;
-    transform: translateY(-15px);
   }
 }
 .food .food_btn {
@@ -2221,7 +2217,7 @@ html {
 }
 .medic .medic_human02 {
   width: 81.4814814815%;
-  margin-bottom: 20px;
+  margin: 0 0 20px 10px;
 }
 @media screen and (min-width: 900px) {
   .medic .medic_human02 {
@@ -2495,7 +2491,7 @@ html {
   }
 }
 .room article .white_area {
-  margin: 0 23px;
+  margin: 0 5%;
   padding: 40px 0 42px;
   border-radius: 7px;
   background-color: #fff;

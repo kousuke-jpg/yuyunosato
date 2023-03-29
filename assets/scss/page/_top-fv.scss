@@ -3,7 +3,10 @@
 
 .header_wrap {
     @include md.rps-sw(sp) {
-        padding: 0 27px;
+        padding: 0 26px 0 17px;
+    }
+    @include md.rps-sw(pc2){
+        padding-left: 26px;
     }
 
     background-color: vb.$beige-color;
@@ -13,7 +16,7 @@
             max-width: 600px;
         }
         padding:md.per(7,375) 0 md.per(8,375);
-        max-width: 321px;
+        max-width: 332px;
         // height: 35px;
         @include md.flexset(center, space-between);
         margin: 0 auto;
@@ -48,7 +51,7 @@
                 }
 
                 strong {
-                    @include md.fontset(vb.$main-font, 1.0rem, 500, 14px);
+                    @include md.fontset(vb.$main-font, 1.2rem, 500, 14px);
                     color: vb.$green-color;
 
                     @include md.rps-sw(xl) {
@@ -150,7 +153,7 @@
         .anv_logo {
             position: absolute;
             top: 17px;
-            left: md.per(28, 375);
+            left: 28px;
             min-width: 58px;
             max-width: 110px;
             width: md.per(58,375);
@@ -166,7 +169,7 @@
         .fv_group {
             position: absolute;
             bottom:75px;
-            left: md.per(28, 375);
+            left: 24px;
             width:md.per(324,375);
             @include md.rps-sw(sp){
                 min-width: 324px;
@@ -176,7 +179,7 @@
             @include md.rps-sw(tab) {
                 top: auto;
                 bottom:162px;
-                left: md.per(35);
+                left: md.per(28);
                 max-width: 1208px;
                 width: 95%;
             }
@@ -185,7 +188,7 @@
         .fv_message {
             position: absolute;
             bottom:20px;
-            left: md.per(28, 375);
+            left: 28px;
             @include md.fontset(vb.$main-font, 1.2rem, 500, 17px);
             color: #222;
 
@@ -216,8 +219,8 @@
         padding: 40px 0 20px;
         background: url(../img/beige_bg_pc.svg) no-repeat top/cover;
         @include md.rps-sw(sp){
-            padding-right:5%;
-            padding-left:5%;
+            padding-right:26px;
+            padding-left:28px;
         }
         @include md.rps-sw(tab) {
             margin-top:-27px;
@@ -233,6 +236,7 @@
             color: #000;
 
             @include md.rps-sw(tab) {
+                margin-bottom:40px;
                 font-size: 2.4rem;
                 line-height: 35px;
             }
@@ -353,7 +357,7 @@
                     strong {
                         display: inline-block;
                         margin-right: 5px;
-                        font-size: 1.6em;
+                        font-size: 1.6rem;
                         line-height: 23px;
                         @include md.rps-sw(tab){
                             font-size: 2.8rem;

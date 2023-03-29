@@ -2,7 +2,7 @@
 @use '../modules/index' as md;
 
 .reason {
-    padding: 28px 5% 32px;
+    padding: 28px 0 32px;
     overflow: hidden;
 
     @include md.rps-sw(tab) {
@@ -196,7 +196,7 @@
                 }
     
                 &.list_left {
-                    margin-bottom: 10px;
+                    margin-bottom: md.per(62,337.5);
     
                     @include md.rps-sw(tab) {
                         position: relative;
@@ -216,11 +216,11 @@
                     }
     
                     .reason_human_message {
-                        display: none;
-    
+                        position: absolute;
+                        top:md.per(-52,155);
+                        right:md.per(2,320);
+                        width:md.per(314,320);
                         @include md.rps-sw(tab) {
-                            display: block;
-                            position: absolute;
                             top: md.per(-100, 416);
                             right: md.per(259, 645);
                             width: md.per(490, 645);
@@ -230,103 +230,103 @@
             }
         }
     
-        .reason_access_text {
+    }
+    .reason_access_text {
+        @include md.fontset(vb.$sub-font, 2.4rem, 600, 0);
+        text-align: center;
+        color: vb.$green-color;
+
+        @include md.rps-sw(tab) {
+            font-size: 4.8rem;
+            line-height: 69px;
+        }
+
+        .main-font {
+            @include md.fontset(vb.$main-font, 1.6rem, 400, 16px);
+
+            @include md.rps-sw(tab) {
+                font-size: 3.2rem;
+                line-height: 46px;
+            }
+        }
+
+        .block {
+            display: block;
+
+            @include md.rps-sw(tab) {
+                display: inline;
+            }
+
+            strong {
+                display: inline-block;
+                margin-right: 6px;
+
+                @include md.rps-sw(tab) {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        @include md.rps-sw(tab) {
+            .text-position-pc {
+                display: inline-block;
+                transform: translateX(-17px);
+            }
+        }
+
+        .text-position {
+            display: inline-block;
+            transform: translateX(10px);
+
+            @include md.rps-sw(tab) {
+                transform: translateX(22px);
+            }
+        }
+
+        strong {
+            position: relative;
             @include md.fontset(vb.$sub-font, 2.4rem, 600, 34px);
-            text-align: center;
-            color: vb.$green-color;
-    
+            color: vb.$orange-color;
+
             @include md.rps-sw(tab) {
                 font-size: 4.8rem;
                 line-height: 69px;
             }
-    
-            .main-font {
-                @include md.fontset(vb.$main-font, 1.6rem, 400, 16px);
-    
+
+            &.text-position-st {
+                display: inline-block;
+                margin-left: -8px;
+
                 @include md.rps-sw(tab) {
-                    font-size: 3.2rem;
-                    line-height: 46px;
+                    margin-right: 4px;
+                    margin-left: -18px;
                 }
             }
-    
-            .block {
-                display: block;
-    
+
+            &:before {
+                @include md.uline(0, 0, 8px);
+
                 @include md.rps-sw(tab) {
-                    display: inline;
-                }
-    
-                strong {
-                    display: inline-block;
-                    margin-right: 6px;
-    
-                    @include md.rps-sw(tab) {
-                        margin-right: 5px;
-                    }
+                    width: calc(100% + 10px) !important;
+                    @include md.uline(-2px, 50%, 26px);
+                    transform: translateX(-50%);
                 }
             }
-    
+        }
+
+        .sub_t {
+            display:block;
+            margin-top: 3px;
+            @include md.fontset(vb.$main-font, 1.2rem, 500, 20px);
+
             @include md.rps-sw(tab) {
-                .text-position-pc {
-                    display: inline-block;
-                    transform: translateX(-17px);
-                }
+                margin-top: 23px;
+                font-size: 3.0rem;
+                line-height: 46px;
+
             }
-    
-            .text-position {
-                display: inline-block;
-                transform: translateX(10px);
-    
-                @include md.rps-sw(tab) {
-                    transform: translateX(22px);
-                }
-            }
-    
-            strong {
-                position: relative;
-                @include md.fontset(vb.$sub-font, 2.4rem, 600, 34px);
-                color: vb.$orange-color;
-    
-                @include md.rps-sw(tab) {
-                    font-size: 4.8rem;
-                    line-height: 69px;
-                }
-    
-                &.text-position-st {
-                    display: inline-block;
-                    margin-left: -8px;
-    
-                    @include md.rps-sw(tab) {
-                        margin-right: 4px;
-                        margin-left: -18px;
-                    }
-                }
-    
-                &:before {
-                    @include md.uline(0, 0, 8px);
-    
-                    @include md.rps-sw(tab) {
-                        width: calc(100% + 10px) !important;
-                        @include md.uline(-2px, 50%, 26px);
-                        transform: translateX(-50%);
-                    }
-                }
-            }
-    
-            .sub_t {
-                display: inline-block;
-                margin-top: 3px;
-                @include md.fontset(vb.$main-font, 1.2rem, 500, 20px);
-    
-                @include md.rps-sw(tab) {
-                    margin-top: 23px;
-                    font-size: 3.0rem;
-                    line-height: 46px;
-    
-                }
-                @include md.rps-sw(xl){
-                    font-size: 3.2rem;
-                }
+            @include md.rps-sw(xl){
+                font-size: 3.2rem;
             }
         }
     }
